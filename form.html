@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        animation: bgGradasi 15s infinite alternate;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to top left, #3bf4edd3, #3557f1);
+        background-size: 300%;
+      }
+
+      @keyframes bgGradasi {
+        0% {
+          background-position: top;
+        }
+        25% {
+          background-position: right;
+          background-size: 250%;
+        }
+        50% {
+          background-position: left;
+          background-size: 350%;
+        }
+        75% {
+          background-position: bottom;
+          background-size: 200%;
+        }
+        100% {
+          background-position: center;
+        }
+      }
+
+      fieldset {
+        background-color: #fff;
+        border: 3px solid #000;
+      }
+
+      .form-grup {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      input,
+      label {
+        padding: 8px;
+      }
+
+      legend {
+        background-color: #35f196;
+        padding: 15px 48px;
+        border-radius: 100px;
+        margin-bottom: 30px;
+        font-size: 18px;
+        font-weight: 600;
+        margin-left: 27%;
+        border: 3px solid #000;
+      }
+
+      .container {
+        width: 40%;
+        height: 60%;
+      }
+
+      button {
+        background-color: #35f196;
+        padding: 10px 30px;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 500;
+        margin: 10px 37%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <fieldset>
+        <legend>Form Pendaftaran</legend>
+        <!-- login form -->
+        <form action="#" method="post">
+          <div class="form-grup">
+            <label>Email:</label>
+            <input required type="text" />
+          </div>
+          <div class="form-grup">
+            <label>Nama Lengkap:</label>
+            <input required type="text" />
+          </div>
+          <div class="form-grup">
+            <label>Asal Sekolah:</label>
+            <input required type="text" />
+          </div>
+          <div class="form-grup">
+            <label>Kelas:</label>
+            <input required type="text" />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </fieldset>
+    </div>
+  </body>
+</html>
