@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Software Request</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        animation: bgGradasi 15s infinite alternate;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to top left, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+        background-size: 300%;
+      }
+      .container {
+        width: 40%;
+      }
+
+      fieldset {
+        background-color: transparent;
+        border: 3px solid #fff;
+        border-radius: 20px;
+        box-shadow: 0 0 30px 15px #ffd6b7a8;
+        animation: linear-stroke 10s infinite alternate;
+        padding: 14px;
+      }
+      .form-grup {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 8px 15px;
+        box-sizing: border-box;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 30px;
+        color: #fff;
+      }
+
+      input,
+      label,
+      button {
+        padding: 5px;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      input {
+        border: 2px solid #5d5d5d;
+      }
+
+      span {
+        color: #ffaa00;
+      }
+
+      button {
+        background-color: #f3a469;
+        padding: 10px 10px;
+        border-radius: 10px;
+        font-size: 15px;
+        margin: 0 50px;
+        margin-top: 30px;
+        font-weight: 600;
+        cursor: pointer;
+        border: 3px solid #fff;
+        transition: all 0.8s;
+      }
+
+      .form-grup-checkbox {
+        display: flex;
+        flex-direction: column;
+        padding: 0 15px;
+      }
+      .checkbox {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: left;
+      }
+
+      .checklist {
+        margin-right: 8px;
+        align-items: center;
+      }
+
+      .form-grup-radio {
+        display: flex;
+        flex-direction: column;
+        padding: 0 15px;
+      }
+      .radio {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: left;
+      }
+
+      .choose {
+        margin-right: 8px;
+        align-items: center;
+      }
+
+      button:hover {
+        background-color: #3f51b1;
+        color: #fff;
+      }
+
+      @keyframes linear-stroke {
+        0% {
+          box-shadow: 0 0 30px 10px #8f6aae;
+        }
+        20% {
+          box-shadow: 0 0 30px 10px #a86aa4;
+        }
+        60% {
+          box-shadow: 0 0 30px 10px #cc6b8e;
+        }
+        80% {
+          box-shadow: 0 0 30px 10px #f18271;
+        }
+        100% {
+          box-shadow: 0 0 30px 10px #f7c978;
+        }
+      }
+
+      @keyframes bgGradasi {
+        0% {
+          background-position: top;
+        }
+        25% {
+          background-position: right;
+          background-size: 250%;
+        }
+        50% {
+          background-position: left;
+          background-size: 350%;
+        }
+        75% {
+          background-position: bottom;
+          background-size: 200%;
+        }
+        100% {
+          background-position: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <fieldset>
+        <h1>Software Request</h1>
+        <form action="#" method="post">
+          <div class="form-grup">
+            <label>Name <span>*</span></label>
+            <input required type="text" />
+          </div>
+          <div class="form-grup">
+            <label>Employee ID <span>*</span></label>
+            <input required type="number" />
+          </div>
+          <div class="form-grup">
+            <label>Email <span>*</span></label>
+            <input required type="email" />
+          </div>
+          <div class="form-grup">
+            <label>Mobile No / Extri.No</label>
+            <input type="text" />
+          </div>
+          <div class="form-grup-checkbox">
+            <label>Which software do you require ? <span>*</span></label>
+
+            <label class="checkbox" for="software"
+              >Software A
+              <input type="checkbox" class="checklist" name="software" value="A" unchecked="unchecked" />
+            </label>
+
+            <label class="checkbox" for="software"
+              >Software B
+              <input type="checkbox" class="checklist" name="software" value="B" />
+            </label>
+
+            <label class="checkbox" for="software"
+              >Software C
+              <input type="checkbox" class="checklist" name="software" value="C" />
+            </label>
+          </div>
+          <div class="form-grup-radio">
+            <label>How urgently do you need it? <span>*</span></label>
+            <div class="radio-option">
+              <input type="radio" name="urgency" id="optionA" value="A" />
+              <label for="optionA">Software A</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" name="urgency" id="optionB" value="B" />
+              <label for="optionB">Software B</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" name="urgency" id="optionC" value="C" />
+              <label for="optionC">Software C</label>
+            </div>
+          </div>
+          <div class="form-grup">
+            <button type="submit" class="btn-request">Request</button>
+          </div>
+        </form>
+      </fieldset>
+    </div>
+  </body>
+</html>
