@@ -8,6 +8,7 @@
       * {
         margin: 0;
         padding: 0;
+        color: #fff;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       }
       body {
@@ -43,41 +44,47 @@
       }
 
       fieldset {
-        background-color: #fff;
-        border: 3px solid #000;
+        background-color: transparent;
+        border: 3px solid #fff;
         border-radius: 20px;
-        box-shadow: 15px 15px 0 rgba(127, 127, 127, 0.5);
+        box-shadow: 0 0 30px 15px #31e4ffb7;
+        padding: 16px;
       }
 
       .form-grup {
         width: 100%;
         display: flex;
         flex-direction: column;
-        padding: 10px;
+
+        padding: 8px 15px;
         box-sizing: border-box;
       }
 
       input,
-      label {
+      label,
+      button {
         padding: 8px;
         border-radius: 10px;
         font-weight: 500;
+      }
+
+      input {
+        border: 2px solid #5d5d5d;
       }
 
       legend {
         background-color: #35bcf1;
         padding: 15px 48px;
         border-radius: 100px;
-        margin-bottom: 30px;
+        margin-bottom: 24px;
         font-size: 18px;
         font-weight: 600;
-        margin-left: 27%;
-        border: 3px solid #000;
+        margin-left: 26%;
+        border: 3px solid #fff;
       }
 
       .container {
         width: 40%;
-        height: 80%;
       }
 
       button {
@@ -85,9 +92,12 @@
         padding: 10px 30px;
         border-radius: 10px;
         font-size: 15px;
-        font-weight: 500;
-        margin: 15px 37%;
-        transition: all 0.7s;
+        margin: 0 50px;
+        margin-top: 30px;
+        font-weight: 600;
+        cursor: pointer;
+        border: 3px solid #fff;
+        transition: all 0.8s;
       }
 
       button:hover {
@@ -104,7 +114,7 @@
         <form action="#" method="post">
           <div class="form-grup">
             <label>Email:</label>
-            <input required type="text" />
+            <input required type="email" />
           </div>
           <div class="form-grup">
             <label>Nama Lengkap:</label>
@@ -118,7 +128,9 @@
             <label>Kelas:</label>
             <input required type="text" />
           </div>
-          <button type="submit">Submit</button>
+          <div class="form-grup">
+            <button type="submit" class="btn-login">Submit</button>
+          </div>
         </form>
       </fieldset>
     </div>
