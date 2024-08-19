@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: #f5f5f5;
+  font-family: "poppins", sans-serif;
+}
+
+.btn-primary {
+  background-color: rgb(255, 81, 119);
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-image: linear-gradient(-60deg, #ffffff00 0%, #ffffff00 40%, #ffffff44 40%, #ffffff44 60%, #ffffff00 60%, #ffffff00 100%);
+  background-size: 200% 100%;
+  background-position-x: 150%;
+  transition: scale 0.5s;
+}
+
+.btn-primary:hover {
+  animation: shimmer 1s forwards;
+  scale: 1.1;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position-x: 150%;
+  }
+  100% {
+    background-position-x: -50%;
+  }
+}
